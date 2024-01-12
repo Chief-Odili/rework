@@ -1,0 +1,188 @@
+*,.
+::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.wrapper{
+    background-color: aqua;
+    min-height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+}
+.calculator{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width:400px;
+    height: 550px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(23, 55, 103, 0.247);
+}
+
+.display{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 380px;
+    height: 120px;
+    border-radius: 25px;
+    background-color: rgb(233, 243, 239);
+    overflow: hidden;
+    box-shadow: -1px 1px lightsteelblue,
+                -2px 2px lightsteelblue,
+                -3px 3px lightsteelblue,
+                -4px 4px lightsteelblue;
+}
+
+#calculation{
+    font-family: inherit;
+    color: cornflowerblue;
+    font-size: 18px;
+}
+
+#result{
+    font-family: inherit;
+    font-size: 40px;
+    color: cornflowerblue;
+}
+#buttons{
+    margin-top: 10px;
+    width: 380px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "clear clear remove divide"
+                         "seven eight nine times"
+                         "four five six minus"
+                         "one two three plus"
+                         "zero dot equals equals";
+    grid-auto-rows: 70px;
+    gap : 10px;
+}
+.button{
+    font-size: 30px;
+    border-radius: 50px;
+    color: steelblue;
+    font-family: inherit;
+    background-color: rgb(243, 243, 243);
+    box-shadow: -1px 1px lightsteelblue,
+                -2px 2px lightsteelblue,
+                -3px 3px lightsteelblue,
+                -4px 4px lightsteelblue;
+    transition: 0.1s;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    
+}
+
+.button:hover{
+    background-color: aqua;
+}
+
+#clear-button{
+    grid-area: clear;
+    background-color: red;
+    color: white;
+}
+#clear-button:hover{
+    background-color: rgb(230, 184, 184);
+}
+
+#remove-button{
+    background-color: red;
+    color: white;
+}
+
+#remove-button:hover{
+    background-color: rgb(230, 184, 184) ;
+}
+
+#equals{
+    grid-area: equals;
+    background-color: green;
+    color: white;
+    font-weight: 800;
+}
+#equals:hover{
+    background-color: rgb(186, 244, 186);
+}
+
+#times, #minus, #divide, #plus{
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+}
+
+#times:hover, #minus:hover, #divide:hover, #plus:hover{
+    background-color:rgb(193, 193, 237) ;
+}
+.button:active{
+    box-shadow: none;
+    transform: translate(-4px, 4px);
+    outline: none;
+}
+
+footer{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-family: inherit;
+    font-size: 30px;
+    color: lightsteelblue;
+    background-color: white;
+}
+@media (max-width:400px){
+    .calculator{
+        width: 100vw;
+    }
+    .display{
+        width: 99%;
+    }
+    #calculation{
+        font-size: 15px;
+    }
+    #result{
+        font-size: 30px;
+    }
+    #buttons{
+        width: 99%;
+    }
+    .button{
+        font-size: 26px;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+
+.Top{
+    text-align: center;
+    font-size:24px;
+    color: lightsteelblue;
+    padding-top: -15px;
+}
+
