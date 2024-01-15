@@ -65,6 +65,7 @@ body{
     font-family: inherit;
     font-size: 40px;
     color: cornflowerblue;
+    margin-top: -10px;
 }
 #buttons{
     margin-top: 10px;
